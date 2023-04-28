@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Cart{% endblock %}
+{% block name %}Cart{% endblock %}
+
+
+{% block content %}
+    {% for i in cart_list %}
+
+    <img src="{{ i.cart_prod.img.url }}" width="200px" alt="">
+    <h3>{{ i.cart_prod.name }}(Count:{{ i.count }})</h3>
+    <p>{{ i.cart_prod.price }}</p>
+
+
+    {% endfor %}
+
+{% endblock %}
